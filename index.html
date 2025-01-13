@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neural Link Corporation - Cloud Storage Solutions">
+    <title>NEURAL LINK CORPORATION</title>
+    <style>
+        /* CSS Reset and Variables */
+        :root {
+            --primary-color: #ffffff;
+            --text-color: #ffffff;
+            --transition-speed: 0.3s;
+            --spacing-unit: 20px;
+            --max-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: url(b94a76bce98603c151bf75c79ccd0516.gif) center/cover fixed no-repeat;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: var(--spacing-unit);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            transition: transform var(--transition-speed);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-unit);
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all var(--transition-speed);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: var(--spacing-unit);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: clamp(1.25rem, 2vw, 2rem);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Image Gallery */
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform var(--transition-speed);
+        }
+
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Mission and Vision */
+        .section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section h2 {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .section p {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            text-align: justify;
+            margin: 0;
+            padding: 0 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: var(--spacing-unit);
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                margin: 2rem 0;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="NEURAL LINK (5).png" alt="Neural Link logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="busorghome.html">Home</a></li>
+            <li><a href="busorggallery.html">Gallery</a></li>
+            <li><a href="busorgprofile.html">Profile</a></li>
+            <li><a href="busorgcontactus">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="hero">
+            <h1>NEURAL LINK CORPORATION</h1>
+            <p>Unlock the Power of your Digital Brain</p>
+        </section>
+
+        <section class="image-row">
+            <div class="image-card">
+                <img src="cloud1.jpg" alt="Cloud computing visualization" loading="lazy">
+            </div>
+            <div class="image-card">
+                <img src="cloud3.jpg" alt="Digital innovation concept" loading="lazy">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Mission</h2>
+            <p>At Neural Link Corp, our mission is to empower individuals and organizations by providing cutting-edge cloud storage solutions that mimic the efficiency, adaptability, and intelligence of the human brain. We strive to make data management seamless, secure, and intuitive, enabling our users to unlock their full potential in the digital age.</p>
+        </section>
+
+        <section class="section">
+            <h2>Vision</h2>
+            <p>To revolutionize the way the world stores, accesses, and processes information by creating a future where cloud storage seamlessly integrates with human creativity and innovation, becoming the ultimate digital extension of the mind.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Neural Link Corporation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
